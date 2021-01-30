@@ -7,6 +7,10 @@ import { Switch, Route, withRouter, Redirect } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import LoginPage from './pages/LoginPage'
 import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import SignupPage from './pages/SignupPage';
+import SeeVero from './pages/SeeVero';
+import AddItem from './components/AddItem/AddItem';
 
 
 function App(props) {
@@ -36,6 +40,15 @@ function App(props) {
     props.history.push('/')
   }
 
+  function NotFound(){
+    return(
+    <div className='Page'>
+      <h1>404 not found</h1>
+    </div>
+    )
+  }
+  
+
 
   return (
     <div className="App">
@@ -48,8 +61,21 @@ function App(props) {
         <Route exact path ='/login' render={props=>
           <LoginPage handleSignupOrLogin={handleSignupOrLogin}/>
         }/>
+         <Route exact path ='/signup' render={props=>
+          <SeeVero/>
+        }/>
+          <Route exact path ='/add' render={props=>
+          getUser() ?
+          <AddItem/>
+          :
+          <Redirect to = '/login'/>
+        }/>
+          <Route exact path ='/createauserverifiedbyveronicasnellprettycoolhowicandothisright' render={props=>
+          <SignupPage handleSignupOrLogin={handleSignupOrLogin}/>
+        }/>
+        <Route component={NotFound}/>
       </Switch>
-    {/* <Footer/> */}
+    <Footer/>
     </div>
   );
 }
