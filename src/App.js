@@ -6,19 +6,20 @@ import { getUser, logout } from './services/userService';
 import { Switch, Route, withRouter, Redirect } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import LoginPage from './pages/LoginPage'
+import Header from './components/Header/Header';
 
 
 function App(props) {
   const [ userState, setUserState ] = useState({ user: getUser() });
 
 
-  const [ items, setItems ] = useState({
+  const [ itemData, setItemData ] = useState({
     results:{}
   })
   async function getAllItems(){
     const data = await getItems()
     console.log(data)
-    setItems(data)
+    setItemData(data)
   }
   useEffect(() => {
     getAllItems();
@@ -26,7 +27,7 @@ function App(props) {
 
   function handleSignupOrLogin(){
     setUserState({ user:getUser()})
-    props.history.push('./search')
+    props.history.push('/')
   }
 
   function handleLogout(){
@@ -38,11 +39,11 @@ function App(props) {
 
   return (
     <div className="App">
-         {/* <Header user={userState.user}
-     handleLogout={handleLogout}/> */}
+         <Header user={userState.user}
+     handleLogout={handleLogout}/>
       <Switch>
         <Route exact path ='/' render={ props=>
-          <HomePage items={items} user={userState.user}/>        
+          <HomePage itemData={itemData} user={userState.user}/>        
         }/> 
         <Route exact path ='/login' render={props=>
           <LoginPage handleSignupOrLogin={handleSignupOrLogin}/>
