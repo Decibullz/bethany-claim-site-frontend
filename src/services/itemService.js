@@ -1,10 +1,10 @@
 export function getItems(items){
-    return fetch('http://localhost:3000/items').then(res=>res.json())
+    return fetch('https://bethany-lnf-server.herokuapp.com/items').then(res=>res.json())
 }
 
 export function deleteItem(item){
     console.log(item)
-    return fetch('http://localhost:3000/items/delete', {
+    return fetch('https://bethany-lnf-server.herokuapp.com/items/delete', {
         method: 'DELETE',
         headers: {
             'Content-Type': 'Application/json'

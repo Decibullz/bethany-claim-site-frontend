@@ -1,6 +1,6 @@
 import { setToken, getUserFromToken, removeToken } from './tokenService';
 
-const BASE_URL = 'http://localhost:3000/user';
+const BASE_URL = 'https://bethany-lnf-server.herokuapp.com/user';
 
 
 

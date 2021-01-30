@@ -14,7 +14,7 @@ export default function Item(props){
     return( 
         <div className="Item">
             <h1>{`${props.item.name}`}</h1>
-            <img src={`${props.item.image}`}/>
+            <img src={`${props.item.image}`} alt='Lost Item'/>
             <p>{`${props.item.description}`}</p>
             {props.user && <button onClick={()=>deleteOneItem(props.item._id)}>delete</button>}
         </div>
