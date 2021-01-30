@@ -2,8 +2,38 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: gray;
 }
-.TopBook{
+.Item{
   margin: 15px;
+}
+.Page {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Footer,p{
+  justify-content: space-between;
+}
+.collection{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 15px;
+}
+
+.transbox {
+  margin: 30px;
+  padding: 10px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.8;
+  font-weight: bold;
+  color: #000000;
+  text-align: center;
+}
+img{
+  width:300px
 }
