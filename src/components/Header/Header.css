@@ -1,0 +1,23 @@
+.Header{
+    background-color: rgb(88,54,28);
+    padding-right:10px;
+    padding-left:10px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Header a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.NavLinks{
+    list-style: none;
+    display: flex;
+}
+
+.NavLinks li{
+    margin-right: 20px;
+}
