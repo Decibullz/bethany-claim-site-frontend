@@ -62,12 +62,12 @@ export default function AddItem(props){
                 </div>
                 <div className="form-group">
                     <div className="col-sm-12">
-                        <input value={formState.image} name = "image" placeholder='image' className = "form-control" onChange={handleChange} type="text"/>
+                        <input value={formState.image} name = "image" placeholder='Image URL' className = "form-control" onChange={handleChange} type="text"/>
                     </div>
                 </div>
                 <div className="form-group">
                     <div className="col-sm-12">
-                        <input value={formState.description} name = "description" placeholder='description' className = "form-control" onChange={handleChange} type="text"/>
+                        <input value={formState.description} name = "description" placeholder='Description' className = "form-control" onChange={handleChange} type="text"/>
                     </div>
                 </div>
                 <div className="form-group">
