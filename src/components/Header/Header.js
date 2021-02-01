@@ -13,8 +13,8 @@ export default function Header(props){
                     
             <li>{props.user && <Link to='' onClick={props.handleLogout}>Log Out</Link>}</li>
             <li>{props.user && <Link to= '/add'>Add Item</Link>}</li>                   
-            <li>{!props.user && <Link to= '/signup'>Signup</Link>}</li>
-            <li>{!props.user && <Link to ='/login'>Login</Link>}</li>                        
+            {/* <li>{!props.user && <Link to= '/signup'>Signup</Link>}</li>
+            <li>{!props.user && <Link to ='/login'>Login</Link>}</li>                         */}
                  
                 </ul>
             </nav>
