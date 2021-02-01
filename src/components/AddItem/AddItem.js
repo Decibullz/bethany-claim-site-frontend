@@ -57,7 +57,7 @@ export default function AddItem(props){
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
                     <div className="col-sm-12">
-                        <input value={formState.name} name="name" placeholder='Name' className = "form-control" onChange={handleChange} type="text"/>
+                        <input value={formState.name} name="name" placeholder='Claim Id' className = "form-control" onChange={handleChange} type="text"/>
                     </div>
                 </div>
                 <div className="form-group">
