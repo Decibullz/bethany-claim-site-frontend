@@ -38,7 +38,7 @@ const Contact = (props)=>{
             body: JSON.stringify({emailState, message})
         }).then(res => res.json()).then(setMessage({
             message:''
-        })).then (window.confirm('Your Email has been sent!\nThank you for your interest!'))
+        })).then (window.confirm('Your Message has been sent!'))
     }
     
 
