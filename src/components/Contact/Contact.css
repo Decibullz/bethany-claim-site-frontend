@@ -1,0 +1,86 @@
+.container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.fieldset{
+    border: 1px solid black;
+    height: 280px;
+    width: 390px;
+    border-radius: 5px;
+    box-shadow: 5px 1px 15px rgb(136,99,164);
+    margin-top: 17px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: whitesmoke;
+}
+
+input{
+    margin-bottom: 5px;
+}
+input, textarea{
+    width: 310px;
+}
+textarea{
+    max-height: 139px;
+    min-height: 139px;
+}
+
+legend{
+    background-color: rgb(136,99,164);
+    color: white;
+    border-radius: 5px;
+    width: 300px;
+    margin-top: -18px;
+}
+
+
+#envelope, #pencil{
+    display: flex;
+}
+
+
+#envelope > h3, #pencil > h3{
+    margin-top: 6px;
+    margin-right: 5px;
+}
+button{
+    margin-top: -7px;
+}
+button:hover{
+    border: 1px solid #282c34;
+    box-shadow: 0px 1px 10px rgb(136,99,164);
+}
+.fa-envelope-square,.fa-pen-square{
+    color: rgb(136,99,164)
+}
+
+@media only screen and (max-width: 800px) {
+    .fieldset{
+        height: 175px;
+        width: 250px;
+        margin-top: 9px;
+    }
+    
+    input{
+        margin-bottom: 2px;
+    }
+    input, textarea{
+        width: 225px;
+    }
+    textarea{
+        max-height: 65px;
+        min-height: 65px;
+    }
+    
+    legend{
+        color: white;
+        border-radius: 5px;
+        width: 225px;
+        margin-top: -18px;
+    }
+}
