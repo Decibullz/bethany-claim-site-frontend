@@ -19,7 +19,7 @@ export default function AddItem(props){
       }
 
       function addNewItem(lostItem) {
-        const BASE_URL = 'http://localhost:3000/items'
+        const BASE_URL = 'https://bethany-lnf-server.herokuapp.com/items'
         return fetch(BASE_URL + '/save', {
             method: 'POST',
             headers: {
@@ -35,7 +35,6 @@ export default function AddItem(props){
     })).then(alert('Item Added Successfully!'))}
 
       async function handleSubmit(evt) {
-        evt.preventDefault();
         try {
           await addNewItem(formState)
         } catch (err) {
