@@ -16,7 +16,7 @@ export default function Item(props){
             <h1>Claim # {`${props.item.name}`}</h1>
             <img src={`${props.item.image}`} alt='Lost Item'/>
             <p>{`${props.item.description}`}</p>
-            {props.user && <button onClick={()=>deleteOneItem(props.item._id)}>delete</button>}
+            {props.user && <button onClick={()=>deleteOneItem(props.item._id)}>&nbsp;❌ &nbsp;</button>}
         </div>
     )
 }
